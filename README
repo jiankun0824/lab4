@@ -1,0 +1,31 @@
+Question A:
+
+>g++ -o QuestionA QuestionA
+>nm QuestionA
+
+int average(int	n1,	float n2):
+000000010040110e T _Z7averageif
+
+double average(double * n1, double	& n2):
+00000001004010e0 T _Z7averagePdRd
+
+
+Question B:
+>g++ -o QuestionB QuestionB
+>./QuestionB
+
+char a,*pa;
+int b,*pb;
+float c,*pc;
+double d,*pd;
+
+sizeof(a):1  sizeof(pa):8
+sizeof(b):4  sizeof(pb):8
+sizeof(c):4  sizeof(pc):8
+sizeof(d):1  sizeof(pd):8
+
+a is in char form ,so size of a is 1,
+b is in int form ,so size of b is 4,
+c is in float form ,so size of c is 4,
+d is in double form ,so size of d is 8.
+相同的機器應有相同大小的pointer，因為不同type的pointer存的address的大小是相同的。
